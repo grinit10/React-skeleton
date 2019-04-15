@@ -11,8 +11,9 @@ export default function * () {
 /**
  * Fetch question details from the local proxy API
  */
-function * handleFetchQuestion ({question_id}) {
-    const raw = yield call(apis.questionAPI.fetchQuestion(question_id))
+export function * handleFetchQuestion ({question_id}) {
+    const raw = yield call(() => apis.questionAPI.fetchQuestion(question_id))
+    yield console.log(raw);
     const json = yield raw.json();
     const question = json.items[0];
     /**

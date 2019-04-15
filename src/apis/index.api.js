@@ -1,7 +1,9 @@
 import questionsAPI from "./questions.api";
 import questionAPI from "./question.api";
 
-export default apis = {
+const apis = {
     questionsAPI : questionsAPI,
     questionAPI : questionAPI
 }
+
+export default apis;
